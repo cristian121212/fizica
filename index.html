@@ -312,6 +312,36 @@
       min-width: 500px;
       object-fit: cover;
     }
+    .wrapper {
+       position: relative;
+       overflow: hidden;
+       max-width: 490px;
+       float: right;
+       margin-left: 10px;
+       margin-right: 10px;
+       width: 100%;
+       height: 250px;
+    }
+
+     #slide {
+       position: absolute;
+       right: -1000px;
+       width: 100%;
+       height: 250px;
+       background: blue;
+       -webkit-animation: slide 0.5s forwards;
+       -webkit-animation-delay: 1s;
+        animation: slide 0.5s forwards;
+       animation-delay: 1s;
+     }
+
+     @-webkit-keyframes slide {
+       100% { right: 0; }
+     }
+
+     @keyframes slide {
+       100% { right: 0; }
+     }      
     </style>
   </head>
   <body>
@@ -360,8 +390,8 @@
     <section>
       <div class="container reveal">
         <div class="content-1">
-          <div class="poza-dreapta">
-            <img class="imagine" src="poze-proiect-fizica/titulescu-einstein.jpg">
+          <div class="wrapper">
+            <img id="slide" src="poze-proiect-biologie/th (1) (1).jpg">
           </div>
           <div class="propozitie">
             <p><span class="enunt-1">La</span> oficiul de brevete, Albert Einstein evalua cererile de brevetare pentru dispozitive electromagnetice. Și-a stăpânit locul de muncă rapid, rămânându-i timp pentru a cugeta asupra transmisiei semnalelor electrice și a sincronizării electromecanice, lucru care ii trezise interesul de câțiva ani. În timp ce era la școala politehnică, a studiat teoriile electromagnetice ale fizicianului scoțian, James Maxwell, care descriau natura luminii. Astfel a descoperit că viteza luminii rămânea constantă, lucru necunoscut chiar si pentru Maxwell însuși. Cu toate acestea, noua descoperire  încalca legile de mișcare ale lui Newton pentru că nu există viteză în teroria lui Newton. Această observație îl determină pe Einstein sa formuleze principiul relativității.</p>
