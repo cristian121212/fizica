@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background:radial-gradient(#281c3e,#0f051d);
+        background-size: cover;
+      }
+
+      h1,h3,h4,h5 {
+        margin: 0;
+        padding: 0;
+        color: white;
+      }
+
+      .team{
+        display: flex;
+        flex: 1fr;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: wrap;
+        margin: 50px;
+      }
+      
+      .info {
+        display: flex;
+        flex: 1fr;
+        text-align: center;
+        justify-content: center;
+        min-width: 250px;
+        width: 100%;
+        min-width: 300px;
+      }
+
+      .info-1 {
+        display: flex;
+        flex: 1fr;
+        text-align: center;
+        justify-content: center;
+        max-width: 400px;
+        min-width: 300px;
+      }
+
+      .profile-pic {
+        position: relative;
+        width:100%;
+        min-width: 300px;
+      }
+
+      .img {
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        object-fit: cover;
+        border-radius: 2000px;
+        min-width: 300px;
+      }
+
+      .img-1 {
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        object-fit: cover;
+        border-style: solid;
+        border-width: 4px;
+        border-color: 	rgb(50,205,50);
+        border-radius: 2000px;
+        min-width: 300px;
+      }
+
+      .img-2 {
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        object-fit: cover;
+        border-radius: 2000px;
+        min-width: 300px;
+      }
+
+      .profile {
+        margin-right: 50px;
+        width: 20%;
+        height: 20%;
+        min-width: 300px;
+      }
+
+      .header {
+        background-color: rgba(17, 40, 85);
+        display: flex;
+        align-items: center;
+        justify-content: left;
+      }
+
+      .button-1 {
+        background-color: rgb(17, 40, 85);
+        color: white;
+        border: none;
+        margin-bottom: 20px;
+        margin-top: 3px;
+        margin-left: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .titlu-container {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+      .content {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        background-color: lightblue;
+        box-sizing: border-box;
+        width: 80%;
+        border-width: 3px;
+        border-style: solid;
+        border-color: rgb(10, 102, 194);
+      }
+
+      .poze-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 5px;
+      }
+
+      .butoane {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: left;
+        position:fixed;
+        left: 0;
+        bottom: 0;
+      }
+      
+
+      .button {
+        background-color: rgb(10, 102, 194);
+        margin-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-width: 1px;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        transition-duration: 0.15s;
+        font-size: 15px;
+      }
+
+      .button-color {
+        color: white;
+        text-decoration: none;
+        padding-top: 70px;
+        padding-bottom: 80px;
+        border-width: 1px;
+        border-radius: 50px;
+        height: 200px;
+        font-size: 30px;
+        font-weight: bold;
+        margin-left:20px;
+      }
+
+      .button:hover {
+        background-color: white;
+        border-width: 2px;
+      }
+
+      .button-color:hover {
+        color: rgb(10, 102, 194);
+        font-size: 30px;
+      }
+
+      .icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 100px ,100px ,100px ,100px;
+        padding: 0px;
+        margin: 0px;
+        margin-top: 30px;
+        background-color: rgba(30, 31, 34, 0.6);
+        border-radius: 30px;
+      }
+
+      .icon {
+        width: 10%;
+        height: 10%;
+        object-fit: cover;
+        padding: 0px;
+        margin: 0px;
+        cursor: pointer; 
+        position: relative;
+        left: -4%;
+      }
+
+      .icon-1 {
+        width: 10%;
+        height: 10%;
+        object-fit: cover;
+        padding: 0px;
+        margin: 0px;
+        cursor: pointer;
+      }
+
+      .icon-2 {
+        width: 10%;
+        height: 10%;
+        object-fit: cover;
+        padding: 0px;
+        margin: 0px;
+        cursor: pointer;
+        position: relative;
+        right: -8%;
+      }
+
+      .icon-3 {
+        width: 10%;
+        height: 10%;
+        object-fit: cover;
+        padding: 0px;
+        margin: 0px;
+        cursor: pointer;
+        position: relative;
+        right: -4%;
+      }
+
+      .titlu {
+        display: flex;
+        flex: 1fr;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 50px;
+        margin-bottom: 75px;
+        margin-top: 75px;
+      }
+
+      .logo {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img class="logo" src="poze-proiect-fizica/Fizica-removebg-preview.png">
+      <div>
+        <button class="button-1">
+          <a class="button-color" href="index.html"><u>Albert Einstein</u></a>
+        </button>
+        <button class="button-1">
+          <a class="button-color" href="despre-noi.html"><u>Despre noi</u></a>
+        </button>
+      </div>
+    </div>
+    <div>
+      <div class="titlu">
+       <u>Echipa Noastra</u>
+      </div>
+    </div>
+    <div class="team">
+      <div class="container">
+        <div class="profile">
+          <div class="profile-pic">
+            <img class="img" src="poze-proiect-fizica/grasu.jpeg">
+            <div class="info">
+              <h1><u>Ene Cristian</u></h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile">
+          <div class="profile-pic">
+            <img class="img" src="poze-proiect-fizica/mica si lacu.jpg">
+            <div class="info-1">
+              <h1>Ene Mario</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile">
+          <div class="profile-pic">
+            <img class="img-1" src="poze-proiect-fizica/cutu.jpg">
+            <div class="info">
+              <h1>Badea Antonio</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile">
+          <div class="profile-pic">
+            <img class="img-1" src="poze-proiect-fizica/cavaler.jpg">
+            <div class="info">
+              <h1>Ifrim Timur</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="icon-container">
+      <img class="icon-2" src="poze-proiect-fizica/camera.png">
+      <img class="icon-3" src="poze-proiect-fizica/share-screen.png">
+      <img class="icon-1" src="poze-proiect-fizica/mute.png">
+      <img class="icon" src="poze-proiect-fizica/call.png">
+    </div>
+  </body>
+</html>
