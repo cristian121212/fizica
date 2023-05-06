@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Asap", sans-serif;
+    }
+    body{
+      margin: 0px;
+    }
+    section{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    section:nth-child(1){
+      color: #e0ffff;
+      }
+    section:nth-child(2){
+      color: #42455a;
+      background: #e0ffff;
+    } 
+    section:nth-child(3){
+      color: #e0ffff;
+    }
+    section:nth-child(4){
+      color: #42455a;
+      background: #e0ffff;
+    }
+    section .container{
+      margin: 0px;
+      width: 100%;
+    }
+    section h1{
+      font-size: 120px;
+    }
+    section h2{
+      font-size: 40px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    section .text-container{
+      display: flex;
+    }
+    section .text-container .text-box{
+      margin: 20px;
+      padding: 20px;
+      background: #00c2cb;
+    }
+    section .text-container .text-box h3{
+      font-size: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 900px){
+      section h1{
+        font-size: 2rem;
+        text-align: center;
+      }
+      section .text-container{
+        flex-direction: column;
+      }
+    }
+
+    .reveal{
+      position: relative;
+      transform: translateY(150px);
+      opacity: 0;
+      transition: 1s all ease;
+    }
+
+    .reveal.active{
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .content-container-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(
+        circle closest-corner at center 125px,
+       #222,
+       black 40%
+     ) no-repeat;
+     text-align: center;
+     border-style: solid;
+     border-color: purple;
+     border-left: none;
+     border-right: none;
+    }
+
+    .content-title {
+      font-size: 60px;
+      font-family: 'Pacifico', cursive;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    h1 {
+     display: inline-block;
+     font-family: 'Syncopate', sans-serif;
+     text-transform: uppercase;
+     background: radial-gradient(
+         circle farthest-corner at center center,
+         #ccc,
+         #333
+      ) no-repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+    }
+    .logo {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .button:hover {
+     background-color: white;
+     border-width: 2px;
+    }
+
+    .button-color:hover {
+      color: rgba(0,0,0,2);
+      font-size: 30px;
+    }
+
+    .button-color {
+      color: white;
+      text-decoration: none;
+      border-style: solid;
+      box-shadow: 8px 4px; 
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-width: 2px;
+      height: 200px;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: roboto;
+      background-color: rgb(28, 55, 110);
+    }
+      
+    .header {
+      background-color: rgba(17, 40, 85);
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    .button-1 {
+      padding: 0px;
+      background-color: rgb(28, 55, 110);
+      color: white;
+      border: none;
+      margin-bottom: 20px;
+      margin-left: 20px;
+      font-size: 18px;
+      cursor: pointer;
+      text-decoration: none;
+    } 
+
+    .marime {
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .enunt {
+      margin-left: 7%;
+      color: white;
+    }
+    .enunt-1 {
+      margin-left: 4%;
+      color: white;
+    }
+
+    .propozitie {
+      font-size: 25px;
+      color: white;
+    }
+
+    .content-1 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: linear-gradient(to right, #434343 0%, black 100%);
+      padding: 10px;
+    }
+
+    * {box-sizing:border-box}
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 60%;
+      position: relative;
+      margin: auto;
+      margin-top: 50px;
+    }
+
+    .background {
+      background-image: linear-gradient(to right, #434343 0%, black 100%);
+      padding-top: 1px;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: -10%;
+      border-top-right-radius: 100px;
+      border-bottom-right-radius: 100px;
+      background-color: rgb(62, 97, 167);
+    }
+
+    .prev {
+      left: -10%;
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+      background-color: rgb(62, 97, 167);
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 30px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 25px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 20px;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      margin-bottom: 20px;
+    }
+
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    .poza-dreapta {
+      float: right;
+      width: 25%;
+      min-width: 500px;
+      margin-top: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .imagine {
+      height: 400px;
+      min-width: 500px;
+      object-fit: cover;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img class="logo" src="poze-proiect-fizica/Fizica-removebg-previewgas.png">
+      <div>
+        <button class="button-1">
+          <a class="button-color" href="index.html">Albert Einstein</a>
+        </button>
+        <button class="button-1">
+          <a class="button-color" href="despre-noi.html">Despre noi</a>
+        </button>
+      </div>
+    </div>
+    <div class="content-container-title">
+      <div class="content-title" ><h1>Albert Einstein</h1></div>
+    </div>
+    <div class="content-1">
+      <div class="marime">
+        <p><span class="enunt">Născut</span> în Ulm, Germania, în anul 1879, Albert Einstein a elaborat teoriile speciale și generale ale relativității. În anul 1921 a câștigat premiul Nobel pentru fizică deoarece a reușit să explice efectul fotoelectric. S-a stins din viață la 18 aprilie 1955, în Princeton, New Jersey.</p>
+      </div>
+      <div class="propozitie">
+        <p><span class="enunt-1">Albert</span> Einstein s-a născut pe data de 14 martie 1879 în Ulm, Württemberg, Germania și a crescut într-o familie  de evrei. Tatăl său, Hermann Einstein a fost vânzător și inginer si, împreună cu fratele lui,   a pus bazele unei companii care se ocupa cu fabricarea de echipament electric. Aceasta avea sediul în Munchen, Germania și purta numele:  Elektrotechnische Fabrik J. Einstein &Cie. Mama sa, fostă Pauline Koch era casnică. Einstein a avut o singură soră, Maja, care s-a născut la doi ani după el.</p>
+      </div>
+      <div class="propozitie">
+        <p><span class="enunt-1">Einstein</span>  a frecventat școala primară la Gimnaziul Luitpold din Munchen. I-a plăcut muzica clasică și a cântat la vioară. Cu toate acestea se simtea îndepărtat și chinuit de educația rigidă prusacă pe care o primea acolo. A avut o deficiență în discursul oral care se manifesta printr-un ritm încet în vorbire si pauze pentru a se putea gândi la ce urmează să spună. Mai târziu, Einstein a scris despre două momente care i-au marcat copilăria. Unul dintre ele a fost întâlnirea cu o busolă, la vârsta de cinci ani când a rămas fermecat de forța care mișca acul. Cel de-al doilea moment a avut loc la vârsta de 12 ani când a descoperit o carte de geometrie pe care a citit-o de nenumărate ori.</p>
+      </div>
+      <div class="propozitie">
+        <p><span class="enunt-1">În</span> anul 1889, familia Einstein a invitat un student polonez la medicină care avea o situație materială precară, Maz Talmud, să vină în casa lor în fiecare joi pentru cină. Talmud a devenit meditator neoficial pentru tânărul Albert, pe care l-a învățat matematică și filosofie la nivel avansat. Una dintre cărțile pe care Talmud i le-a imprumutat lui Albert era o carte de științe pentru copii în care autorul și-a imaginat o plimbare alături de electricitatea care circula printr-un cablu de telegraf. Einstein a început să se întrebe cum ar arăta o rază de lumină dacă ai alerga cot la cot cu ea la aceeași viteză. Dacă lumina ar fi fost o undă, atunci raza de lumină ar fi părut ca nu se mișcă, ca o undă înghețată. Deși, de fapt, raza de lumină se mișcă. Acest paradox l-a făcut să scrie prima „lucrare științifică” la 16 ani, „Analiza stării de eter în câmpurile magnetice.” Această problemă a vitezei relative față de un observator nemișcat și a observatorului care se mișcă o dată cu lumina era o chestiune care îi va acapara gândirea pentru următorii 10 ani.</p>
+      </div>
+      <div class="propozitie">
+        <p><span class="enunt-1">În</span> anul 1894 compania lui Hermann Einstein nu a reușit să obțină un contract important pentru a putea să instaleze o rețea electrică în Munchen, iar acesta a fost forțat să se mute cu familia în Milano, Italia. Albert a rămas la un internat din Munchen, care aparținea unei rude, pentru a-și putea termina studiile la Gimnaziul Luitpold. Dând piept cu stagiul militar atunci cand avea vârsta obligatorie, Albert s-a retras de la școală și a folosit un bilet de la medic, pretinzând că suferă de astenie nervoasă pentru a-și justifica refuzul înrolării. În acest fel, ajunge la Milano pentru a se alătura părinților săi. Aceștia îi împărtașeau sentimentele, dar erau îngrijorați de viitoarele consecințe pe care ar trebui să le înfrunte Albert ca urmare a abandonului școlar și a faptului că a evitat serviciul militar și că nu avea aptitudini care să îl ajute să își găsească un loc de muncă.</p>
+      </div>
+      <div class="propozitie">
+        <p><span class="enunt-1">Din</span> fericire, Einstein a putut să se înscrie direct la Școala Federală Politehnică Elvețiană (Eidgenössische Polytechnische Schule) din Zürich, Elveția. Pentru că îi lipsea echivalentul diplomei de liceu, Albert a avut mici probleme cu examenul de admitere, dar a avut un punctaj exceptional la matematică și la fizică. Din această cauză, el a fost admis la școală cu condiția de a-și termina prima parte a studiilor.  A mers la un liceu special condus de Jost Winteler în Aarau, Elveția și a absolvit în anul 1896 la vârsta de 17 ani. A devenit prieten pe viață cu familia Winteler, la care a locuit și s-a îndrăgostit de fiica acestora, Marie. În acel moment, Einstein a renunțat de cetățenia germană pentru a evita stagiul militar și s-a înscris la școala din Zürich. </p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container reveal">
+        <div class="content-container-title">
+          <div class="content-title" ><h1>Anul miraculos</h1></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container reveal">
+        <div class="content-1">
+          <div class="poza-dreapta">
+            <img class="imagine" src="poze-proiect-fizica/titulescu-einstein.jpg">
+          </div>
+          <div class="propozitie">
+            <p><span class="enunt-1">La</span> oficiul de brevete, Albert Einstein evalua cererile de brevetare pentru dispozitive electromagnetice. Și-a stăpânit locul de muncă rapid, rămânându-i timp pentru a cugeta asupra transmisiei semnalelor electrice și a sincronizării electromecanice, lucru care ii trezise interesul de câțiva ani. În timp ce era la școala politehnică, a studiat teoriile electromagnetice ale fizicianului scoțian, James Maxwell, care descriau natura luminii. Astfel a descoperit că viteza luminii rămânea constantă, lucru necunoscut chiar si pentru Maxwell însuși. Cu toate acestea, noua descoperire  încalca legile de mișcare ale lui Newton pentru că nu există viteză în teroria lui Newton. Această observație îl determină pe Einstein sa formuleze principiul relativității.</p>
+          </div>
+          <div class="propozitie">
+            <p><span class="enunt-1">În</span> 1905-adesea numit „anul miraculos” al lui Einstein – acesta scrie o lucrare pentru doctorat și ii sunt  publicate alte patru lucrări în „Analele Fizicii” (Annalen der Physik), unul dintre cele mai recunoscute jurnale de fizică. Cele patru lucrări – efectul fotoelectric, mișcarea browniană, relativitatea speciala și echivalența dintre materie și energie – vor schimba cursul fizicii moderne și îl vor aduce în atenția lumii academice. În lucrarea despre materie si energie, acesta a dedus binecunoscuta ecuație E=mc2, sugerând că mici particule de materie pot fi transformate în acumulări uriașe de energie, anticipând dezvoltarea puterii nucleare. Au existat speculații ca Einstein și soția sa, Maric, au lucrat împreună la celebrele lucrări din 1905 ale fizicianului, dar istoricii care au studiat subiectul nu au găsit dovezi ale implicării acesteia. De fapt, în lucrări, Einstein menționează conversațiile cu Michele Besso în elaborarea relativității.</p>
+          </div>
+          <div class="propozitie">
+            <p><span class="enunt-1">La</span> început, lucrările din 1905 ale lui Einstein au fost ignorate de comunitatea fizicienilor. Lucrurile au început să se schimbe atunci când a avut parte de atenția lui Max Planck, cel mai influent fizician al generației sale și fondatorul teoriei cuantice. Primind comentariile laudative ale lui Planck prin prisma experimentelor care îi confirmau teoriile, Einstein a fost invitat să țină prelegeri la întâlniri internaționale, avansând rapid în lumea academică. I-au fost oferite o serie de posturi la cele mai prestigioase instutiții, inclusiv de la Universitatea din Zürich, Universitatea din Praga, de la Institutul Federal Elvețian de Tehnologie și în final de la Universitatea din Berlin unde a fost director al Institutului de Fizică Keiser Wilhelm între anii 1913-1933.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container reveal">
+        <div class="content-container-title">
+          <div class="content-title" ><h1>Teoria relativității</h1></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container reveal">
+        <div class="content-1">
+          <div class="propozitie">
+            <p><span class="enunt-1">În</span> anul 1915, fizicianul a terminat teoria generală a relativității, pe care o considera capodopera sa. El era convins că relativitatea generală era corectă din cauza frumuseții sale matematice și pentru că a prezis cu exactitate periheliul orbitei lui Mercur în jurul Soarelui, care era incompletă în teoria lui Newton. Teoria generală a relativității a prezis, de asemenea, o deviere măsurabilă a luminii în jurul Soarelui când o planetă sau un alt soare orbitează în jurul acestuia. Această anticipare a fost confirmată în observații făcute de astronomul britanic Sir Arthur Eddington în timpul eclipsei solare din 1919. În 1921, Albert Einstein a primit vestea că a câștigat Premiul Nobel pentru fizică. Pentru ca relativitatea era încă o controversă, Einstein a primit premiul pentru explicarea efectului fotoelectric. </p>
+          </div>
+          <div class="propozitie">
+            <p><span class="enunt-1">În</span> anii 1920, Einstein a lansat noua știință a cosmologiei. Ecuațiile sale au  prevestit ca universul este dinamic, fiind mereu în expansiune sau în contractare. Acest lucru a contrazis perspectiva generală că universul este nemișcat, perspectivă pe care Einstein a susținut-o mai devreme, fiind un reper în dezvoltarea teoriei generale a relativității. Calculele sale următoare au indicat faptul că universul s-ar putea extinde sau contracta. În 1929, astronomul Edwin Hubble a descoperit ca universul se extinde, astfel confirmând munca lui Einstein. În timpul vizitei la Observatorul Mount Wilson din apropiere de Los Angeles, în  1930, Einstein l-a intâlnit pe Hubble și a declarat că această constanta cosmologică, teoria sa inițială a mărimii inerte și formei universului este „cea mai mare gafă” a sa.</p>
+          </div>
+          <div class="propozitie">
+            <p><span class="enunt-1">În</span> timp ce Einstein era în turneu în jurul lumii pentru a-și prezenta teoriile în anii 1920, naziștii prindeau putere sub conducerea lui Adolf Hitler. Teoriile relativității ale  fizicianului au devenit o țintă a propagandei naziste. În 1931, naziștii au înrolat alți fizicieni să-l catalogheze pe Einstein și teoriile sale ca fiind „fizică evreiască”. În acest timp, savantul a aflat ca guvernul german, fiind sub controlul total al partdului nazist, a emis o lege prin care evreilor le era interzis să dețină vreo funcție oficială, inclusiv predarea în universități. De asemenea, a aflat ca numele lui se afla pe o listă neagra  și că o organizație nazistă a publicat o revistă cu fotografia lui Einstein cu sloganul „nu este încă spânzurat”.</p>
+          </div>
+          <div class="propozitie">
+            <p><span class="enunt-1">În</span> decembrie 1932 Einstein a decis să părăsească Germania pentru totdeauna. A acceptat un post la noul Institut de studii avansate din Princeton, New Jersey, care a ajuns să fie o Mecca a fizicienilor de pe tot globul. Aici și-a petrecut restul carierei încercând să elaboreze teoria câmpului unificat – o teorie atotcuprinzătoare care ar trebui să unifice toate forțele universului și, implicit, toate legile fizicii, într-una singură – care să combată interpretarea acceptată a fizicii cuantice.  Alți savanți europeni care au fugit din diferite țări care erau amenințate de ocuparea nazistă s-au refugiat în Statele Unite. Câțiva dintre acești oameni de știință știau că naziștii plăuiesc sa dezvolte o armă atomică și pentru o perioadă de timp avertismentele lor către Washington, D.C. nu au fost luate în seamă.   </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container reveal">
+        <div class="content-container-title">
+          <div class="content-title" ><h1>Ultimele zile</h1></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container reveal">
+        <div class="content-1">
+          <div class="propozitie">
+            <p><span class="enunt-1">În</span> 17 aprilie 1955, în timp ce lucra la un discurs prin care se pregătea să comemoreze cea de-a șaptea aniversare a Israelului, Einstein a suferit un anevrism abdominal si a suferit o  hemoragie internă. A fost dus la Centrul Universitar Medical din Princeton pentru tratament, dar a refuzat operația, crezând că și-a trăit viața și era mulțumit să își accepte soarta. „Vreau să plec când vreau” a început el atunci. „Nu are sens să prelungim viața artificial. Mi-am indeplinit sarcinile, este timpul să plec. Și o voi face cu eleganță.” Einstein a murit la Centrul Universitar Medical în zorii zilei următoare – 18 aprilie 1955 – la vârsta de 76 de ani</p>
+          </div>
+          <div class="propozitie">
+            <p><span class="enunt-1">În</span> timpul autopsiei,   Thomas Stoltz Harvey a scos creierul lui Einstein, se pare că fără permisiunea familiei, pentru conservarea și viitorul studiu de către neurologi. Rămășitele sale au fost arse și au fost împrăștiate într-un loc secret. După decenii de studiu, creierul lui Albert Einstein se află, în prezent, la Centrul Universitar Medical din Princeton.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <div class="container reveal">
+        <div class="content-container-title">
+          <div class="content-title" ><h1>Imagini cu Albert Einstein in viata sa</h1></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container reveal">
+        <div class="background">
+          <!-- Slideshow container -->
+          <div class="slideshow-container">
+      
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="poze-proiect-fizica/albert-einstein-copil.webp" style="width:100%;
+              max-height: 725px;border-style: solid;border-width: 2px;">
+              <div class="text">Copil</div>
+            </div>
+      
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="poze-proiect-fizica/sddshdshs.jpeg" style="width:100%;
+              max-height: 725px;border-style: solid;border-width: 2px;">
+              <div class="text">Adult</div>
+            </div>
+      
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="poze-proiect-fizica/albert-einstein-9.jpg" style="width:100%;max-height: 725px;
+              border-style: solid;border-width: 2px;">
+              <div class="text">Varstnic</div>
+            </div>
+            <br>
+      
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+      
+          <!-- The dots/circles -->
+          <div style="text-align:center;margin-bottom: 0px;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      
+      
+        <script src="main.js"></script>
+      </div>
+    </section>
+    <script src="main-1.js"></script>
+  </body>
+</html>
